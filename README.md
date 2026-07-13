@@ -8,7 +8,7 @@ Built as part of the **Intern – Product** assignment for **ConveGenius.AI**.
 
 ## 🔗 Live Demo
 
-> **[Play the game here → your-live-link.vercel.app]([(https://fraction-game-eight.vercel.app/)])**
+> **[Play the game here → your-live-link.vercel.app](https://fraction-game-eight.vercel.app/)**
 
 *(Replace the link above once deployed on Vercel.)*
 
