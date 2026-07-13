@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fraction Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+  <canvas id="bg-canvas"></canvas>
+
+  <main class="game" aria-live="polite">
+    <header>
+      <h1>Fraction <span>Game</span></h1>
+      <button class="mute" id="muteButton" type="button" aria-pressed="false">
+        <svg id="soundIcon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/>
+          <path d="M16.5 8.5a5 5 0 0 1 0 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M19 6a9 9 0 0 1 0 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+        </svg>
+        <span id="muteLabel">Sound On</span>
+      </button>
+    </header>
+
+    <section class="main" aria-label="Fraction matching game">
+      <div class="pie-wrap">
+        <div class="pie-glow"></div>
+        <svg id="pie" viewBox="0 0 240 240" role="img" aria-label="Fraction pie"></svg>
+        <div class="center-label" id="centerLabel">0/2</div>
+      </div>
+
+      <div class="panel">
+        <div class="target">
+          <p class="eyebrow">Make this fraction</p>
+          <div class="fraction" aria-label="Target fraction">
+            <span id="targetTop">1</span>
+            <span class="bar"></span>
+            <span id="targetBottom">2</span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="action add" id="addButton" type="button">
+            <span class="icon">+</span> Add Piece
+          </button>
+          <button class="action remove" id="removeButton" type="button">
+            <span class="icon">&minus;</span> Remove Piece
+          </button>
+        </div>
+
+        <p class="feedback" id="feedback">Add 1 piece to match the target.</p>
+        <div class="progress" id="progress" aria-label="Level progress"></div>
+      </div>
+    </section>
+
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+
+    <section class="finished" id="finished" aria-label="Game finished">
+      <div class="finished-box">
+        <h2>You did it!</h2>
+        <p>You matched every fraction with the pie pieces.</p>
+        <button class="restart" id="restartButton" type="button">Play Again</button>
+      </div>
+    </section>
+  </main>
+
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="three-bg.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
